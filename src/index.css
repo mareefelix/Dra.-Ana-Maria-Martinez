@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #e9e8e7;
+  --color-brand-cream: #f8f2e4;
+  --color-brand-sand: #ead4c2;
+  --color-brand-ochre: #c7893e;
+  --color-brand-rose: #dab7b3;
+  --color-brand-olive: #7e7a61;
+  --color-brand-olive-dark: #5c5945;
+  
+  --font-sans: "Comfortaa", ui-sans-serif, system-ui, sans-serif;
+  --font-accent: "Caveat", cursive;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-olive font-sans antialiased selection:bg-brand-ochre/20 selection:text-brand-olive-dark;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Custom scrollbar to match the branding */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-sand);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-rose);
+}
