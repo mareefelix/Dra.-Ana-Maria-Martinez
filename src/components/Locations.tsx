@@ -1,6 +1,5 @@
 import { FadeIn } from './ui/Animations';
 import { MapPin, Navigation } from 'lucide-react';
-import { BranchLine } from './ui/Icons';
 
 export const Locations = () => {
   const LOCATIONS = [
@@ -26,8 +25,6 @@ export const Locations = () => {
 
   return (
     <section id="contact" className="py-24 lg:py-[6vw] bg-brand-cream relative overflow-hidden">
-      <BranchLine className="absolute -bottom-20 -right-20 lg:-bottom-[5vw] lg:-right-[5vw] w-96 h-96 lg:w-[25vw] lg:h-[25vw] text-brand-olive/5 rotate-[-45deg] pointer-events-none" />
-      
       <div className="max-w-7xl mx-auto px-6 lg:px-[4vw] relative z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-[4vw] items-center">
           

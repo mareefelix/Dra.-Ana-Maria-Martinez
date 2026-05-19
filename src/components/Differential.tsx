@@ -1,5 +1,5 @@
 import { FadeIn, StaggerContainer, StaggerItem } from './ui/Animations';
-import { KangarooLine, JoewyLine } from './ui/Icons';
+import { Ear, ShieldCheck } from 'lucide-react';
 
 export const Differential = () => {
   return (
@@ -22,7 +22,7 @@ export const Differential = () => {
              <div className="space-y-8 lg:space-y-[2vw] mt-12 lg:mt-[3vw]">
                <StaggerItem className="flex gap-6 lg:gap-[1.5vw]">
                   <div className="w-12 h-12 lg:w-[3vw] lg:h-[3vw] rounded-full lg:rounded-[1.5vw] bg-brand-sand flex items-center justify-center shrink-0 text-brand-olive">
-                     <JoewyLine className="w-6 h-6 lg:w-[1.5vw] lg:h-[1.5vw]" />
+                     <Ear className="w-6 h-6 lg:w-[1.5vw] lg:h-[1.5vw]" />
                   </div>
                   <div>
                     <h4 className="text-xl lg:text-[clamp(1.25rem,1.5vw,1.8rem)] font-medium text-brand-olive mb-2 lg:mb-[0.5vw]">Escuta Ativa</h4>
@@ -34,7 +34,7 @@ export const Differential = () => {
                
                <StaggerItem className="flex gap-6 lg:gap-[1.5vw]">
                   <div className="w-12 h-12 lg:w-[3vw] lg:h-[3vw] rounded-full lg:rounded-[1.5vw] bg-brand-sand flex items-center justify-center shrink-0 text-brand-olive">
-                     <KangarooLine className="w-6 h-6 lg:w-[1.5vw] lg:h-[1.5vw]" />
+                     <ShieldCheck className="w-6 h-6 lg:w-[1.5vw] lg:h-[1.5vw]" />
                   </div>
                   <div>
                     <h4 className="text-xl lg:text-[clamp(1.25rem,1.5vw,1.8rem)] font-medium text-brand-olive mb-2 lg:mb-[0.5vw]">Medicina Baseada em Evidências</h4>
@@ -46,12 +46,17 @@ export const Differential = () => {
              </div>
           </StaggerContainer>
 
-          <FadeIn className="relative aspect-square lg:aspect-auto lg:h-[35vw] w-full rounded-[40px] lg:rounded-[2.5vw] bg-brand-sand/80 overflow-hidden flex items-center justify-center border border-brand-sand">
-            {/* Abstract aesthetic representation instead of another photo */}
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-sand/20 to-brand-bg opacity-50"></div>
-            <KangarooLine className="w-64 h-64 lg:w-[15vw] lg:h-[15vw] text-brand-ochre/20" />
+          <FadeIn className="relative aspect-square lg:aspect-auto lg:h-[35vw] w-full rounded-[40px] lg:rounded-[2.5vw] overflow-hidden flex items-center justify-center border border-brand-sand">
+            <img 
+              src="https://lh3.googleusercontent.com/d/1hn86HYPWf_PfI_Em94N6a9l0hlaEuRON"
+              alt="Cuidado Pediatra"
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-cover"
+            />
+            {/* Subtle overlay to ensure text contrast */}
+            <div className="absolute inset-0 bg-brand-olive-dark/10"></div>
             
-            <div className="absolute inset-8 lg:inset-[2vw] border border-brand-olive/10 rounded-[30px] lg:rounded-[2vw]"></div>
+            <div className="absolute inset-8 lg:inset-[2vw] border border-white/20 rounded-[30px] lg:rounded-[2vw] pointer-events-none"></div>
             
             <div className="absolute bottom-10 left-10 right-10 lg:bottom-[2.5vw] lg:left-[2.5vw] lg:right-[2.5vw] bg-brand-bg/90 backdrop-blur p-6 lg:p-[1.5vw] rounded-3xl lg:rounded-[2vw] shadow-xl shadow-brand-olive/5">
               <p className="font-accent text-2xl lg:text-[clamp(1.5rem,2vw,2.5rem)] text-brand-olive-dark text-center leading-snug">

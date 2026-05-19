@@ -1,26 +1,19 @@
 import { FadeIn } from './ui/Animations';
-import { PawPrint } from './ui/Icons';
-
 export const About = () => {
   return (
     <section id="about" className="py-24 lg:py-[6vw] relative overflow-hidden bg-brand-cream">
-      <div className="absolute top-0 right-0 w-full h-full pointer-events-none overflow-hidden">
-        <PawPrint className="absolute -top-10 -right-10 w-48 h-48 lg:w-[15vw] lg:h-[15vw] text-brand-bg/50 rotate-12" />
-        <PawPrint className="absolute bottom-20 left-20 w-32 h-32 lg:w-[10vw] lg:h-[10vw] text-brand-bg/40 -rotate-12" />
-      </div>
-
       <div className="max-w-7xl mx-auto px-6 lg:px-[4vw] relative z-10 w-full">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-[3vw] items-center">
           
           {/* Image */}
           <div className="lg:col-span-5 relative">
-            <FadeIn className="relative aspect-[4/5] rounded-[40px] lg:rounded-[2.5vw] overflow-hidden shadow-2xl">
+            <FadeIn className="relative aspect-[4/5] rounded-[40px] lg:rounded-[2.5vw] overflow-hidden shadow-2xl bg-white">
               <img 
-                src="https://images.unsplash.com/photo-1594824436998-d40bb2f6cb05?auto=format&fit=crop&q=80&w=800" 
+                src="https://lh3.googleusercontent.com/d/1VMrMRr_WEgP9yASnxc6DrF34gBJCXv-2" 
                 alt="Dra. Ana Maria Martinez"
-                className="w-full h-full object-cover grayscale mix-blend-multiply opacity-80"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-brand-ochre/10 mix-blend-overlay"></div>
             </FadeIn>
             
             {/* Callout badge */}

@@ -1,5 +1,4 @@
 import { FadeIn, StaggerContainer, StaggerItem } from './ui/Animations';
-import { BranchLine, JoewyLine, KangarooLine, PawPrint } from './ui/Icons';
 
 export const Hero = () => {
   return (
@@ -15,6 +14,7 @@ export const Hero = () => {
         <img 
           src="https://lh3.googleusercontent.com/d/12uzsPAso44az1nU_NiDUEyyshQPWRzUY"
           alt="Dra. Ana Maria Martinez Banner"
+          referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-[70%_center] md:object-[80%_center] lg:object-[85%_center]" 
         />
         {/* Subtle overlay to ensure text contrast if needed, mostly transparent */}

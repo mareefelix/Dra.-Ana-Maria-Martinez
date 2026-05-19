@@ -1,6 +1,4 @@
 import { FadeIn, StaggerContainer, StaggerItem } from './ui/Animations';
-import { OrganicBlob } from './ui/Icons';
-
 export const Timeline = () => {
   const steps = [
     {
@@ -22,8 +20,6 @@ export const Timeline = () => {
 
   return (
     <section className="py-24 lg:py-[6vw] relative overflow-hidden bg-brand-bg">
-      <OrganicBlob className="absolute top-1/2 left-0 w-[800px] h-[800px] lg:w-[50vw] lg:h-[50vw] text-brand-sand/30 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-      
       <div className="max-w-7xl mx-auto px-6 lg:px-[4vw] relative z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-[4vw] items-center">
           
@@ -44,8 +40,18 @@ export const Timeline = () => {
           <StaggerContainer className="space-y-8 lg:space-y-[2vw] relative before:absolute before:inset-0 before:ml-12 lg:before:ml-[3vw] before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-px before:bg-gradient-to-b before:from-transparent before:via-brand-olive/20 before:to-transparent">
             {steps.map((step, index) => (
               <StaggerItem key={index} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div className="flex items-center justify-center w-24 h-24 lg:w-[6vw] lg:h-[6vw] rounded-full border-[8px] lg:border-[0.5vw] border-brand-bg bg-brand-ochre text-brand-bg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-xl shadow-brand-olive/5 z-10">
-                  <span className="font-sans font-bold text-2xl lg:text-[clamp(1.5rem,1.8vw,2.2rem)] leading-none">{step.num}</span>
+                <div className="relative shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 flex items-center justify-center">
+                  <div className="flex items-center justify-center w-24 h-24 lg:w-[6vw] lg:h-[6vw] rounded-full border-[8px] lg:border-[0.5vw] border-brand-bg bg-brand-ochre text-brand-bg shadow-xl shadow-brand-olive/5">
+                    <span className="font-sans font-bold text-2xl lg:text-[clamp(1.5rem,1.8vw,2.2rem)] leading-none">{step.num}</span>
+                  </div>
+                  <img 
+                    src="https://lh3.googleusercontent.com/d/1cVlSn5b45kbgQm0XM2xst28976cp0B1M" 
+                    alt="Patinha decorativa"
+                    referrerPolicy="no-referrer"
+                    className={`absolute top-1/2 -translate-y-1/2 w-20 h-20 lg:w-[6vw] lg:h-[6vw] opacity-70 object-contain pointer-events-none left-[-4.5rem] md:left-auto md:group-odd:right-[calc(100%+1.5rem)] md:group-odd:left-auto md:group-even:left-[calc(100%+1.5rem)] md:group-even:right-auto ${
+                      index === 1 ? '-scale-y-100 -scale-x-100' : index === 0 || index === 2 ? '-scale-y-100' : ''
+                    }`}
+                  />
                 </div>
                 <div className="w-[calc(100%-6rem)] md:w-[calc(50%-3rem)] lg:w-[calc(50%-3vw)] p-6 lg:p-[1.5vw] rounded-3xl lg:rounded-[2vw] bg-brand-sand/80 border border-brand-olive/5 ml-4 md:ml-0 hover:bg-brand-sand transition-colors">
                   <h4 className="text-2xl lg:text-[clamp(1.5rem,1.8vw,2.2rem)] font-medium text-brand-olive mb-2 lg:mb-[0.5vw]">{step.title}</h4>

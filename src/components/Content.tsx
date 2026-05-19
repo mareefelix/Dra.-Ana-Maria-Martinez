@@ -5,17 +5,17 @@ const POSTS = [
   {
     title: "5 sinais que merecem atenção no seu filho(a)!",
     link: "https://www.instagram.com/ped.anammartinez/",
-    image: "https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80&w=600"
+    image: "https://lh3.googleusercontent.com/d/1GsqyJpYCGylwzG9nmtuskY9uAPWcCNyX"
   },
   {
     title: "Qual o momento ideal para procurar um pediatra?",
     link: "https://www.instagram.com/ped.anammartinez/",
-    image: "https://images.unsplash.com/photo-1629853965935-430b5b8d2fa6?auto=format&fit=crop&q=80&w=600"
+    image: "https://lh3.googleusercontent.com/d/1fDxEPJjZXuTht3aZlTsQZ_RPIyxphgz0"
   },
   {
     title: "Não ameace a criança com injeção",
     link: "https://www.instagram.com/ped.anammartinez/",
-    image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=600"
+    image: "https://lh3.googleusercontent.com/d/1kXOUgv-3qozK9wpyEaHRrKrbP1eOV2b4"
   }
 ];
 
@@ -53,6 +53,7 @@ export const Content = () => {
                 <img 
                   src={post.image} 
                   alt={post.title}
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-olive-dark/80 to-transparent"></div>

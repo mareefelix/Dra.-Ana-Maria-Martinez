@@ -1,6 +1,5 @@
 import { FadeIn, StaggerContainer, StaggerItem } from './ui/Animations';
 import { HeartPulse, Stethoscope, Baby, Home } from 'lucide-react';
-import { BranchLine } from './ui/Icons';
 
 const SERVICES = [
   {
@@ -28,8 +27,6 @@ const SERVICES = [
 export const Services = () => {
   return (
     <section id="services" className="py-24 lg:py-[6vw] relative overflow-hidden bg-gradient-to-b from-brand-bg via-brand-sand/30 to-brand-bg">
-      <BranchLine className="absolute top-0 left-0 w-64 h-64 lg:w-[15vw] lg:h-[15vw] text-brand-olive/5 -translate-x-1/2 -translate-y-1/2 rotate-180" />
-      
       <div className="max-w-7xl mx-auto px-6 lg:px-[4vw] relative z-10 w-full">
         <FadeIn className="text-center max-w-2xl lg:max-w-none mx-auto mb-16 lg:mb-[4vw]">
           <h2 className="text-sm lg:text-[clamp(0.875rem,0.9vw,1.2rem)] font-bold tracking-widest text-brand-ochre uppercase mb-4 lg:mb-[1vw]">Como posso ajudar</h2>
