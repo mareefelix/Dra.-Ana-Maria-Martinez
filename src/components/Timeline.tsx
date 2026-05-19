@@ -37,25 +37,35 @@ export const Timeline = () => {
             </div>
           </FadeIn>
 
-          <StaggerContainer className="space-y-8 lg:space-y-[2vw] relative before:absolute before:inset-0 before:ml-12 lg:before:ml-[3vw] before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-px before:bg-gradient-to-b before:from-transparent before:via-brand-olive/20 before:to-transparent">
+          <StaggerContainer className="space-y-8 lg:space-y-[2vw] relative before:absolute before:inset-0 before:ml-7 md:before:ml-auto lg:before:ml-[3vw] before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-px before:bg-gradient-to-b before:from-transparent before:via-brand-olive/20 before:to-transparent">
             {steps.map((step, index) => (
               <StaggerItem key={index} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                 <div className="relative shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 flex items-center justify-center">
-                  <div className="flex items-center justify-center w-24 h-24 lg:w-[6vw] lg:h-[6vw] rounded-full border-[8px] lg:border-[0.5vw] border-brand-bg bg-brand-ochre text-brand-bg shadow-xl shadow-brand-olive/5">
-                    <span className="font-sans font-bold text-2xl lg:text-[clamp(1.5rem,1.8vw,2.2rem)] leading-none">{step.num}</span>
+                  <div className="flex items-center justify-center w-14 h-14 md:w-24 md:h-24 lg:w-[6vw] lg:h-[6vw] rounded-full border-[4px] md:border-[8px] lg:border-[0.5vw] border-brand-bg bg-brand-ochre text-brand-bg shadow-xl shadow-brand-olive/5">
+                    <span className="font-sans font-bold text-lg md:text-2xl lg:text-[clamp(1.5rem,1.8vw,2.2rem)] leading-none">{step.num}</span>
                   </div>
+                  {/* Paw illustration for desktop (floats outside) */}
                   <img 
                     src="https://lh3.googleusercontent.com/d/1cVlSn5b45kbgQm0XM2xst28976cp0B1M" 
                     alt="Patinha decorativa"
                     referrerPolicy="no-referrer"
-                    className={`absolute top-1/2 -translate-y-1/2 w-20 h-20 lg:w-[6vw] lg:h-[6vw] opacity-70 object-contain pointer-events-none left-[-4.5rem] md:left-auto md:group-odd:right-[calc(100%+1.5rem)] md:group-odd:left-auto md:group-even:left-[calc(100%+1.5rem)] md:group-even:right-auto ${
+                    className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-20 h-20 lg:w-[6vw] lg:h-[6vw] opacity-70 object-contain pointer-events-none md:group-odd:right-[calc(100%+1.5rem)] md:group-odd:left-auto md:group-even:left-[calc(100%+1.5rem)] md:group-even:right-auto ${
                       index === 1 ? '-scale-y-100 -scale-x-100' : index === 0 || index === 2 ? '-scale-y-100' : ''
                     }`}
                   />
                 </div>
-                <div className="w-[calc(100%-6rem)] md:w-[calc(50%-3rem)] lg:w-[calc(50%-3vw)] p-6 lg:p-[1.5vw] rounded-3xl lg:rounded-[2vw] bg-brand-sand/80 border border-brand-olive/5 ml-4 md:ml-0 hover:bg-brand-sand transition-colors">
-                  <h4 className="text-2xl lg:text-[clamp(1.5rem,1.8vw,2.2rem)] font-medium text-brand-olive mb-2 lg:mb-[0.5vw]">{step.title}</h4>
-                  <p className="text-brand-olive/70 leading-relaxed text-sm lg:text-[clamp(0.875rem,0.9vw,1.1rem)]">
+                <div className="relative w-[calc(100%-4.25rem)] md:w-[calc(50%-3rem)] lg:w-[calc(50%-3vw)] p-6 lg:p-[1.5vw] rounded-3xl lg:rounded-[2vw] bg-brand-sand/80 border border-brand-olive/5 ml-3 md:ml-0 hover:bg-brand-sand transition-colors overflow-hidden">
+                  {/* Paw illustration for mobile (decorates as a background watermark inside the card) */}
+                  <img 
+                    src="https://lh3.googleusercontent.com/d/1cVlSn5b45kbgQm0XM2xst28976cp0B1M" 
+                    alt="Patinha decorativa de fundo"
+                    referrerPolicy="no-referrer"
+                    className={`md:hidden absolute right-2 bottom-2 w-14 h-14 opacity-40 object-contain pointer-events-none select-none ${
+                      index === 1 ? '-scale-y-100 -scale-x-100' : index === 0 || index === 2 ? '-scale-y-100' : ''
+                    }`}
+                  />
+                  <h4 className="text-xl md:text-2xl lg:text-[clamp(1.5rem,1.8vw,2.2rem)] font-medium text-brand-olive mb-2 lg:mb-[0.5vw] pr-8 md:pr-0">{step.title}</h4>
+                  <p className="text-brand-olive/70 leading-relaxed text-sm lg:text-[clamp(0.875rem,0.9vw,1.1rem)] pr-6 md:pr-0">
                     {step.text}
                   </p>
                 </div>
