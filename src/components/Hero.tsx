@@ -21,7 +21,10 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/60 via-transparent to-brand-bg/30 md:bg-brand-bg/10" />
       </div>
 
-      <div className="mx-auto px-6 w-full flex flex-col justify-start lg:justify-center relative z-10 pt-10 md:pt-16 lg:pt-0 pb-20 md:pb-0 mt-[1rem] md:mt-[2rem] lg:mt-[-5vw] text-base">
+      <div 
+        className="mx-auto px-6 w-full flex flex-col justify-start lg:justify-center relative z-10 pt-10 md:pt-16 lg:pt-0 pb-20 md:pb-0 mt-[1rem] md:mt-[2rem] lg:mt-[-5vw] text-base"
+        style={{ marginTop: '-20px' }}
+      >
         
         {/* Text Content */}
         <StaggerContainer className="max-w-[20rem] sm:max-w-lg mr-auto lg:mx-auto w-full lg:max-w-none lg:w-fit flex flex-col items-start lg:items-center text-left lg:text-center mt-0 md:mt-0">
@@ -33,7 +36,10 @@ export const Hero = () => {
           </StaggerItem>
           
           <StaggerItem className="w-full mb-6 lg:mb-[2vw]">
-            <h1 className="text-4xl sm:text-4xl font-sans text-brand-olive tracking-tight leading-[1.1] mb-4 lg:mb-[1.25vw] text-left lg:text-center not-italic w-[219px] sm:w-full md:w-[400px] lg:w-full lg:text-[clamp(3.5rem,4.5vw,7rem)]">
+            <h1 
+              className="text-4xl sm:text-4xl font-sans text-brand-olive tracking-tight leading-[1.1] mb-4 lg:mb-[1.25vw] text-left lg:text-center not-italic w-[219px] sm:w-full md:w-[400px] lg:w-full lg:text-[clamp(3.5rem,4.5vw,7rem)]"
+              style={{ fontSize: '55.59px' }}
+            >
               A pediatria que <br className="hidden md:block"/><span className="font-accent text-brand-ochre font-normal text-5xl sm:text-[52px] inline-block mt-0.5 sm:mt-1 lg:text-[clamp(4.5rem,5.5vw,8rem)] lg:leading-[0.9]">escuta,</span><br className="hidden lg:block"/> acolhe e caminha junto.
             </h1>
           </StaggerItem>
